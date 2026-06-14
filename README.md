@@ -31,3 +31,15 @@ El repositorio tiene:
 - Cree el archivo /opt/particion con el contenido de /proc/partitions.
 - Cree el script /opt/scripts/backup_full.sh.
 - Configure tareas automatizas con cron.
+
+## Configuracion de red
+- La interfaz principal es la placa de red de la máquina virtual. En mi caso se llamaba enp0s3 (lo vi con ip a). Le puse una IP, mascara de red y gateway.
+
+## Script de backup
+- El script (que se encuentra en /opt/scripts/backup_full.sh) permite hacer backups poniendo origen y destino.
+
+## Tares programados con cron
+- Configure para realizar un backup diario de /var/log a las 00 y tambien que se haga backup de www_dir los lunes, miercoles y viernes a las 23.
+
+## Conclusion
+Al final la maquina virtual quedo configurada con debian 12, red estatica, acceso SSH, servidor web con PHP, base de deatos MariaDB, particiones adicionales montadas automaticamente y sistema de backup automatico como pedia la consigna.
